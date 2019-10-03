@@ -6,6 +6,8 @@ My personal dotfiles and configuration files.
     - .bashrc
     - .inputrc
     - .bash\_logout
+    - .bash\_aliases
+    - .bash\_env
 - Vim
     - .vimrc
     - .vim/

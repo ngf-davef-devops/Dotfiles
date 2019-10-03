@@ -6,6 +6,8 @@
 !.bashrc
 !.bash_logout
 !.inputrc
+!.bash_aliases
+!.bash_env
 
 # vim
 !.vimrc
