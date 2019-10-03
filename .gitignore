@@ -1,3 +1,9 @@
 /**
 
 !.gitignore
+
+# vim
+!.vimrc
+!.vim/
+!.vim/**
+.vim/.netrwhist
