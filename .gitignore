@@ -5,6 +5,7 @@
 # bash
 !.bashrc
 !.bash_logout
+!.inputrc
 
 # vim
 !.vimrc
