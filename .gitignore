@@ -2,6 +2,10 @@
 
 !.gitignore
 
+# bash
+!.bashrc
+!.bash_logout
+
 # vim
 !.vimrc
 !.vim/
