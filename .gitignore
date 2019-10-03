@@ -8,6 +8,7 @@
 !.inputrc
 !.bash_aliases
 !.bash_env
+!.profile
 
 # vim
 !.vimrc

@@ -8,6 +8,7 @@ My personal dotfiles and configuration files.
     - .bash\_logout
     - .bash\_aliases
     - .bash\_env
+    - .profile
 - Vim
     - .vimrc
     - .vim/
