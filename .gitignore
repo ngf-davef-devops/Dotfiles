@@ -1,17 +1,1 @@
-/**
-
-!.gitignore
-
-# bash
-!.bashrc
-!.bash_logout
-!.inputrc
-!.bash_aliases
-!.bash_env
-!.profile
-
-# vim
-!.vimrc
-!.vim/
-!.vim/**
-.vim/.netrwhist
+*.swp
