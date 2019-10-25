@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
 while read filename; do
-    ln -sf ~/Dotfiles/"$filename" ~/"$filename"
+    ln -sfn ~/Dotfiles/"$filename" ~/"$filename"
 done < filelist.txt
