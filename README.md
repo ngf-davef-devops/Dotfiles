@@ -1,4 +1,4 @@
-# config
+# Dotfiles
 My personal dotfiles and configuration files.
 
 ### Content:
