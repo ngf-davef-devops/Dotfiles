@@ -18,3 +18,5 @@ My personal dotfiles and configuration files.
 - Vim
     - .vimrc
     - .vim/
+- Git
+    - .gitconfig
