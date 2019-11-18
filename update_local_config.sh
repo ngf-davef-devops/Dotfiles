@@ -2,4 +2,4 @@
 
 while read filename; do
     ln -sfn ~/Dotfiles/"$filename" ~/"$filename"
-done < filelist.txt
+done < ~/Dotfiles/filelist.txt

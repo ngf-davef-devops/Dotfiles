@@ -27,7 +27,10 @@ set autoindent
 set nostartofline
 set ruler
 set laststatus=2
-set novisualbell
+" set visualbell instead of beep
+set visualbell
+" but make visualbell do nothing
+set t_vb=
 set cmdheight=2
 set shiftwidth=4
 set softtabstop=4
