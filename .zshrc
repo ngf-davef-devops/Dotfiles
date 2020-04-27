@@ -12,9 +12,6 @@ export CLICOLOR_FORCE=1
 # Don't require escaping globbing characters in zsh.
 unsetopt nomatch
 
-# Nicer prompt.
-export PS1=$'\n'"%F{green} %*%F %3~ %F{white}$ "
-
 # Enable plugins.
 plugins=(git brew history history-substring-search)
 
@@ -30,17 +27,29 @@ then
   source ~/.aliases
 fi
 
-# Allow history search via up/down keys.
-source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
-bindkey "^[[A" history-substring-search-up
-bindkey "^[[B" history-substring-search-down
+# stuff.
+if [ -f ~/Documents/git/agkozak-zsh-prompt/agkozak-zsh-prompt.plugin.zsh ]
+then
+  AGKOZAK_BLANK_LINES=1
+  AGKOZAK_CUSTOM_SYMBOLS=( '⇣⇡' '⇣' '⇡' '+' 'x' '!' '>' '?' )
+  AGKOZAK_PROMPT_DIRTRIM=2
+  AGKOZAK_USER_HOST_DISPLAY=1
+  AGKOZAK_MULTILINE=0
+  AGKOZAK_COLORS_USER_HOST=cyan
+  AGKOZAK_COLORS_PATH=green
+  source ~/Documents/git/agkozak-zsh-prompt/agkozak-zsh-prompt.plugin.zsh
+else
+  # Nicer prompt.
+  export PS1=$'\n'"%F{cyan} %*%F %F{green}%2~ %F{white}$ "
+fi
 
-# Git aliases.
-alias gs='git status'
-alias gc='git commit'
-alias gp='git pull --rebase'
-alias gcam='git commit -am'
-alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
+# Allow history search via up/down keys.
+if [ -f /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh ]
+then
+  source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+  bindkey "^[[A" history-substring-search-up
+  bindkey "^[[B" history-substring-search-down
+fi
 
 # Completions.
 autoload -Uz compinit && compinit
@@ -78,5 +87,3 @@ knownrm() {
    sed -i '' "$1d" ~/.ssh/known_hosts
  fi
 }
-
-

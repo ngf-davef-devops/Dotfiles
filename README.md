@@ -9,17 +9,15 @@ My personal dotfiles and configuration files.
 
 ### Content:
 - Bash
+    - .aliases
     - .bashrc
     - .inputrc
     - .bash\_logout
-    - .bash\_aliases
     - .bash\_env
     - .profile
-- Vim
-    - .vimrc
-    - .vim/
 - Git
     - .gitconfig
     - .gitignore
 - zsh
+    - .aliases
     - .zshrc
