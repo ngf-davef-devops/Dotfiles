@@ -7,3 +7,5 @@
 .vimrc
 .vim
 .gitconfig
+.gitignore
+.zshrc
