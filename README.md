@@ -20,3 +20,6 @@ My personal dotfiles and configuration files.
     - .vim/
 - Git
     - .gitconfig
+    - .gitignore
+- zsh
+    - .zshrc
