@@ -1,11 +1,9 @@
-.bashrc
+.aliases
 .bash_env
-.bash_aliases
 .bash_logout
-.inputrc
-.profile
-.vimrc
-.vim
+.bashrc
 .gitconfig
 .gitignore
+.inputrc
+.profile
 .zshrc
