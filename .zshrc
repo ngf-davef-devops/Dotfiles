@@ -16,7 +16,7 @@ unsetopt nomatch
 plugins=(git brew history history-substring-search)
 
 # Custom $PATH with extra locations.
-export PATH=/Users/me/Library/Python/2.7/bin:/sw/bin/:/usr/local/bin:/usr/local/:/usr/local/sbin:$PATH
+export PATH=/Users/me/Library/Python/2.7/bin:$PATH
 
 # Bash-style time output.
 export TIMEFMT=$'\nreal\t%*E\nuser\t%*U\nsys\t%*S'
