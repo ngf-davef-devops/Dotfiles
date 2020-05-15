@@ -2,8 +2,10 @@
 .bash_env
 .bash_logout
 .bashrc
+.dir_colors
 .gitconfig
 .gitignore
 .inputrc
 .profile
+.vimrc
 .zshrc
