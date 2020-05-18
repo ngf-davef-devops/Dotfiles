@@ -28,7 +28,7 @@ then
 fi
 
 # stuff.
-if [ -f ~/Documents/git/agkozak-zsh-prompt/agkozak-zsh-prompt.plugin.zsh ]
+if [ -f ~/Development/agkozak-zsh-prompt/agkozak-zsh-prompt.plugin.zsh ]
 then
   AGKOZAK_BLANK_LINES=1
   AGKOZAK_CUSTOM_SYMBOLS=( '⇣⇡' '⇣' '⇡' '+' 'x' '!' '>' '?' )
@@ -37,7 +37,7 @@ then
   AGKOZAK_MULTILINE=0
   AGKOZAK_COLORS_USER_HOST=cyan
   AGKOZAK_COLORS_PATH=green
-  source ~/Documents/git/agkozak-zsh-prompt/agkozak-zsh-prompt.plugin.zsh
+  source ~/Development/agkozak-zsh-prompt/agkozak-zsh-prompt.plugin.zsh
 else
   # Nicer prompt.
   export PS1=$'\n'"%F{cyan} %*%F %F{green}%2~ %F{white}$ "
