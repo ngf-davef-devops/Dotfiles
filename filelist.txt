@@ -7,5 +7,6 @@
 .gitignore
 .inputrc
 .profile
+.vim
 .vimrc
 .zshrc
