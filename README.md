@@ -21,3 +21,5 @@ My personal dotfiles and configuration files.
 - zsh
     - .aliases
     - .zshrc
+- General
+    - .hushlogin
