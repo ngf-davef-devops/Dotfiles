@@ -4,5 +4,5 @@
 [credential]
 	helper = osxkeychain
 [core]
-	editor = sublime -n -w
+	editor = subl -n -w
 	excludesfile = ~/.gitignore
