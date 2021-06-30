@@ -16,7 +16,7 @@ unsetopt nomatch
 plugins=(git brew history history-substring-search)
 
 # Custom $PATH with extra locations.
-export PATH=/Users/me/Library/Python/2.7/bin:$PATH
+export PATH="/Users/fishd/.pyenv/bin:$PATH:/Users/fishd/Library/TinyTeX/bin/universal-darwin"
 
 # Bash-style time output.
 export TIMEFMT=$'\nreal\t%*E\nuser\t%*U\nsys\t%*S'
@@ -75,8 +75,14 @@ function gsync() {
  git push origin "$1"
 }
 
+# Python fix for Ansible
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
 # Tell homebrew to not autoupdate every single time I run it (just once a week).
 export HOMEBREW_AUTO_UPDATE_SECS=604800
+
+# Grab Ansible Vault password file
+export ANSIBLE_VAULT_PASSWORD_FILE=/etc/ansible/.vaultpassword
 
 # Delete a given line number in the known_hosts file.
 knownrm() {
@@ -86,4 +92,35 @@ knownrm() {
  else
    sed -i '' "$1d" ~/.ssh/known_hosts
  fi
+}
+if which pyenv >/dev/null; then
+  eval "$(pyenv init -)"
+fi
+if which pyenv-virtualenv-init >/dev/null; then
+  eval "$(pyenv virtualenv-init -)"
+fi
+# pyenv brew fix
+if which pyenv >/dev/null 2>&1; then
+  alias brew='env PATH=${PATH//$(pyenv root)\/shims:/} brew'
+fi
+# Function for pandoc
+alias md2word=md2word
+function md2word () {
+    PANDOC_INSTALLED=$(pandoc --version >> /dev/null; echo $?)
+
+    if [ "0" == ${PANDOC_INSTALLED} ]; then
+        pandoc -o $2 -f markdown -t docx $1
+    else
+        echo "Pandoc is not installed. Unable to convert document."
+    fi
+}
+alias md2pdf=md2pdf
+function md2pdf () {
+    PANDOC_INSTALLED=$(pandoc --version >> /dev/null; echo $?)
+
+    if [ "0" == ${PANDOC_INSTALLED} ]; then
+        pandoc -o $2 -f markdown -t pdf $1
+    else
+        echo "Pandoc is not installed. Unable to convert document."
+    fi
 }

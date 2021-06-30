@@ -17,7 +17,7 @@ alias cp='cp -iv'                           # Preferred 'cp' implementation
 alias mv='mv -iv'                           # Preferred 'mv' implementation
 alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
 alias ll='ls -FGlAhp'                       # Preferred 'ls' implementation
-alias la='ls -A'                            # Show all files
+alias la='ls -A'
 alias less='less -FSRXc'                    # Preferred 'less' implementation
 cd() { builtin cd "$@"; ll; }               # Always list directory contents upon 'cd'
 alias cd..='cd ../'                         # Go back 1 directory level (for fast typers)
@@ -62,6 +62,7 @@ alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\
 #   -------------------------------
 
 zipf () { zip -r "$1".zip "$1" ; }          # zipf:         To create a ZIP archive of a folder
+alias vf='vifm'                             # vf:           Run the vifm file manager
 alias numFiles='echo $(ls -1 | wc -l)'      # numFiles:     Count of non-hidden files in current dir
 alias make1mb='mkfile 1m ./1MB.dat'         # make1mb:      Creates a file of 1mb size (all zeros)
 alias make5mb='mkfile 5m ./5MB.dat'         # make5mb:      Creates a file of 5mb size (all zeros)
@@ -188,3 +189,11 @@ alias showBlocked='sudo ipfw list'                  # showBlocked:  All ipfw rul
         #echo -e "\n${RED}DNS Configuration:$NC " ; scutil --dns
         echo
     }
+
+alias nosleep='caffeinate -dis -w $(lsof -t -c "Jamf")'
+alias sublime='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+
+pstrip() {
+	openssl smime -inform DER -verify -in $1 -noverify -out $2 | plutil -convert xml1 $2
+}
+

@@ -1,8 +1,8 @@
 [user]
-	name = Dave Fisher
 	email = fishd72@users.noreply.github.com
+	name = Dave Fisher
 [credential]
 	helper = osxkeychain
 [core]
-	editor = code --wait
+	editor = sublime -n -w
 	excludesfile = ~/.gitignore
