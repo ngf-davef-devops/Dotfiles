@@ -3,7 +3,7 @@
 
 " Project: Nord Vim
 " Repository: https://github.com/arcticicestudio/nord-vim
-" License: MIT
+" License: MIT 
 
 if version > 580
   hi clear
