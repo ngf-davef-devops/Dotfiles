@@ -3,3 +3,5 @@
 *.LSOverride
 Thumbs.db
 .bundle
+.DS_Store
+.vagrant
