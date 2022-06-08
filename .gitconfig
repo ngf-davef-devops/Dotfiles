@@ -1,8 +1,45 @@
-[user]
-	email = fishd72@users.noreply.github.com
-	name = Dave Fisher
-[credential]
-	helper = osxkeychain
-[core]
-	editor = vim
-	excludesfile = ~/.gitignore
+[color]
+  ui = true
+
+# [commit]
+# 	template = ~/.stCommitMsg
+
+## Git identity & tooling needs to be customized depending upon two factors:
+# Linux vs Mac development environment (Windows is to be considered in the future)
+# Corporate vs Personal project work
+
+##
+# *NOTE* if you are having trouble with the conditional includes
+# 'git config -l' is your friend!
+
+# determine host type by using the root directory convention
+[includeIf "gitdir:/Users/"]
+    path = ~/.gitconfig-macos
+[includeIf "gitdir:/home/"]
+    path = ~/.gitconfig-linux
+[includeIf "gitdir:/nfs/"]
+    path = ~/.gitconfig-linux	
+# [includeIf "gitdir:C:"]
+#     path = ~/.gitconfig-windows
+
+# If working in a Personal MacOS context use the personal config
+# determined by the presence of my personal user ID in the path
+[includeIf "gitdir:/Users/fishd/"]
+	path = ~/.gitconfig-personal
+
+# If working in a Corporate MacOS context use the corporate config
+# determined by the presence of my corporate user ID in the path
+[includeIf "gitdir:/Users/xxxxxx/"]
+	path = ~/.gitconfig-corporate
+
+# If working in a Personal Linux context use the personal config
+# determined by the presence of my personal user ID in the path
+[includeIf "gitdir:/home/fishd/"]
+	path = ~/.gitconfig-personal
+
+# If working in a Corporate Linux context use the corporate config
+# determined by the presence of Linux Developer Desktop standard path naming
+[includeIf "gitdir:/home/xxxxxx/"]
+	path = ~/.gitconfig-corporate
+[includeIf "gitdir:/nfs/"]
+	path = ~/.gitconfig-corporate
