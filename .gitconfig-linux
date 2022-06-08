@@ -1,0 +1,11 @@
+[core]
+  editor = /usr/bin/code >/dev/null 2>&1 --wait
+  excludesfile = ~/.gitignore
+[diff]
+  tool = vscode
+[difftool "vscode"]
+  cmd = /usr/bin/code >/dev/null 2>&1 --wait --diff $LOCAL $REMOTE
+[merge]
+  tool = vscode
+[mergetool "vscode"]
+  cmd = /usr/bin/code >/dev/null 2>&1 --wait $MERGED

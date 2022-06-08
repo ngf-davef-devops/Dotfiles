@@ -1,0 +1,8 @@
+[core]
+  editor = sublime -w
+	excludesfile = ~/.gitignore
+
+[credential]
+	helper = osxkeychain
+
+
