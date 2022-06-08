@@ -1,6 +1,8 @@
 [core]
   editor = /usr/bin/code >/dev/null 2>&1 --wait
   excludesfile = ~/.gitignore
+[credential]
+	credentialStore = secretservice
 [diff]
   tool = vscode
 [difftool "vscode"]
