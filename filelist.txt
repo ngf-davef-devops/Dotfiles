@@ -4,6 +4,10 @@
 .bashrc
 .dir_colors
 .gitconfig
+.gitconfig-linux
+.gitconfig-macos
+.gitconfig-personal
+.gitconfig-corporate
 .gitignore
 .hushlogin
 .inputrc
