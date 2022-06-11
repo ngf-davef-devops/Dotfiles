@@ -62,7 +62,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-if exist fortune; then
+if exists fortune; then
   clear
   fortune -sa | lolcat
   echo " "
