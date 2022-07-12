@@ -1,10 +1,37 @@
 - clean: ['~']
 
+- clean:
+    ~/.config:
+
+- defaults:
+    link:
+      create: true
+      relink: true
+      force: true
+
 - link:
+    ~/.aliases: .aliases
+    ~/.bash_env: .bash_env
+    ~/.bash_logout: .bash_logout
+    ~/.bashrc: .bashrc
+    ~/bin:
+    ~/.config/lxterminal: .config/lxterminal
+    ~/.config/vifm: .config/vifm
+    ~/.dir_colors: .dir_colors
+    ~/.gitconfig: .gitconfig
+    ~/.gitconfig-linux: .gitconfig-linux
+    ~/.gitconfig-macos: .gitconfig-macos
+    ~/.gitconfig-personal: .gitconfig-personal
+    ~/.gitconfig-corporate: .gitconfig-corporate
+    ~/.gitignore: .gitignore
+    ~/.hushlogin: .hushlogin
+    ~/.inputrc: .inputrc
+    ~/.nanorc: .nanorc
+    ~/.profile: .profile
     ~/.ssh/config:
         path: ssh/config
-        create: true
-        relink: false
         force: false
-
-
+    ~/.vim: .vim
+    ~/.vimrc: .vimrc
+    ~/.zprofile: .zprofile
+    ~/.zshrc: .zshrc

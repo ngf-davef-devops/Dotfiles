@@ -133,3 +133,8 @@ function md2pdf () {
         echo "Pandoc is not installed. Unable to convert document."
     fi
 }
+
+# Include local config if present
+if [ -f ~/.zshrc_local ]; then
+    source ~/.zshrc_local
+fi
