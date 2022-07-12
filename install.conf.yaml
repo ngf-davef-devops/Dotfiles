@@ -1,0 +1,10 @@
+- clean: ['~']
+
+- link:
+    ~/.ssh/config:
+        path: ssh/config
+        create: true
+        relink: false
+        force: false
+
+
