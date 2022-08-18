@@ -29,7 +29,7 @@
 
 # If working in a Corporate MacOS context use the corporate config
 # determined by the presence of my corporate user ID in the path
-[includeIf "gitdir:/Users/xxxxxx/"]
+[includeIf "gitdir:/Users/XXXXXX/"]
 	path = ~/.gitconfig-corporate
 
 # If working in a Personal Linux context use the personal config
@@ -39,7 +39,7 @@
 
 # If working in a Corporate Linux context use the corporate config
 # determined by the presence of Linux Developer Desktop standard path naming
-[includeIf "gitdir:/home/xxxxxx/"]
+[includeIf "gitdir:/home/dfisher/"]
 	path = ~/.gitconfig-corporate
 [includeIf "gitdir:/nfs/"]
 	path = ~/.gitconfig-corporate
