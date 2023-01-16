@@ -19,8 +19,8 @@
     path = ~/.gitconfig-linux
 [includeIf "gitdir:/nfs/"]
     path = ~/.gitconfig-linux
-# [includeIf "gitdir:C:"]
-#     path = ~/.gitconfig-windows
+[includeIf "gitdir:C:"]
+    path = ~/.gitconfig-windows
 
 # If working in a Personal MacOS context use the personal config
 # determined by the presence of my personal user ID in the path
@@ -29,7 +29,7 @@
 
 # If working in a Corporate MacOS context use the corporate config
 # determined by the presence of my corporate user ID in the path
-[includeIf "gitdir:/Users/XXXXXX/"]
+[includeIf "gitdir:/Users/davidfisher/"]
 	path = ~/.gitconfig-corporate
 
 # If working in a Personal Linux context use the personal config

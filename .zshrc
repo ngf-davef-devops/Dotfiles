@@ -28,7 +28,7 @@ then
 fi
 
 # stuff.
-if [ -f ~/Development/agkozak-zsh-prompt/agkozak-zsh-prompt.plugin.zsh ]
+if [ -f ~/src/agkozak-zsh-prompt/agkozak-zsh-prompt.plugin.zsh ]
 then
   AGKOZAK_BLANK_LINES=1
   AGKOZAK_CUSTOM_SYMBOLS=( '⇣⇡' '⇣' '⇡' '+' 'x' '!' '>' '?' )
@@ -37,7 +37,7 @@ then
   AGKOZAK_MULTILINE=0
   AGKOZAK_COLORS_USER_HOST=cyan
   AGKOZAK_COLORS_PATH=green
-  source ~/Development/agkozak-zsh-prompt/agkozak-zsh-prompt.plugin.zsh
+  source ~/src/agkozak-zsh-prompt/agkozak-zsh-prompt.plugin.zsh
 else
   # Nicer prompt.
   export PS1=$'\n'"%F{cyan} %*%F %F{green}%2~ %F{white}$ "
@@ -91,7 +91,10 @@ export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 export HOMEBREW_AUTO_UPDATE_SECS=604800
 
 # Grab Ansible Vault password file
-export ANSIBLE_VAULT_PASSWORD_FILE=/etc/ansible/.vaultpassword
+if [ -f /etc/ansible/.vaultpassword ]
+then
+  export ANSIBLE_VAULT_PASSWORD_FILE=/etc/ansible/.vaultpassword
+fi
 
 # Delete a given line number in the known_hosts file.
 knownrm() {

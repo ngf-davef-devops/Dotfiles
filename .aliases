@@ -192,7 +192,7 @@ alias showBlocked='sudo ipfw list'                  # showBlocked:  All ipfw rul
 
 alias nosleep='caffeinate -dis -w $(lsof -t -c "Jamf")'
 alias sublime='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
-alias activate='source ~/development/ansible/bin/activate'
+alias activate='source ~/.ansibledir/bin/activate'
 
 pstrip() {
 	openssl smime -inform DER -verify -in $1 -noverify -out $2 | plutil -convert xml1 $2
