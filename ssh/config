@@ -1,9 +1,0 @@
-Host *
-    addkeystoagent yes
-    identitiesonly yes
-
-Host devbox
-    hostname 172.25.2.10
-    port 22
-    identityfile ~/.ssh/id_rsa
-    user dfisher
