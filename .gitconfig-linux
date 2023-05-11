@@ -2,7 +2,7 @@
   editor = /usr/bin/code >/dev/null 2>&1 --wait
   excludesfile = ~/.gitignore
 [credential]
-	credentialStore = secretservice
+  helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
 [diff]
   tool = vscode
 [difftool "vscode"]
