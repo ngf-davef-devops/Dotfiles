@@ -47,13 +47,13 @@ fi
 if [ -f $HOME/src/zsh-history-substring-search/zsh-history-substring-search.zsh ]
 then
   source $HOME/src/zsh-history-substring-search/zsh-history-substring-search.zsh
-  bindkey "^[[A" history-substring-search-up
-  bindkey "^[[B" history-substring-search-down
+  bindkey "$terminfo[kcuu1]" history-substring-search-up
+  bindkey "$terminfo[kcud1]" history-substring-search-down
 fi
 
-if [ -f $HOME/src/zsh-autosuggestions/zsh-autosuggestions.zsh]
+if [ -f $HOME/src/zsh-autosuggestions/zsh-autosuggestions.zsh  ]
 then
-    source /home/$SUDO_USER/src/zsh-autosuggestions/zsh-autosuggestions.zsh
+    source $HOME/src/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
 
 # history
