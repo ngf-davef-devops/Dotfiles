@@ -1,6 +1,10 @@
 [color]
   ui = true
 
+[user]
+	name = defaultUser
+	email = defaultUser@ema.il
+
 # [commit]
 # 	template = ~/.stCommitMsg
 
@@ -13,35 +17,35 @@
 # 'git config -l' is your friend!
 
 # determine host type by using the root directory convention
-[includeIf "gitdir:/Users/"]
+[includeIf "gitdir/i:/Users/"]
     path = ~/.gitconfig-macos
-[includeIf "gitdir:/home/"]
+[includeIf "gitdir/i:/home/"]
     path = ~/.gitconfig-linux
-[includeIf "gitdir:/nfs/"]
+[includeIf "gitdir/i:/nfs/"]
     path = ~/.gitconfig-linux
-[includeIf "gitdir:C:"]
+[includeIf "gitdir/i:C:"]
     path = ~/.gitconfig-windows
 
 # If working in a Personal MacOS context use the personal config
 # determined by the presence of my personal user ID in the path
-[includeIf "gitdir:/Users/fishd/"]
+[includeIf "gitdir/i:/Users/fishd/"]
 	path = ~/.gitconfig-personal
 
 # If working in a Corporate MacOS context use the corporate config
 # determined by the presence of my corporate user ID in the path
-[includeIf "gitdir:/Users/davidfisher/"]
+[includeIf "gitdir/i:/Users/davidfisher/"]
 	path = ~/.gitconfig-corporate
 
 # If working in a Personal Linux context use the personal config
 # determined by the presence of my personal user ID in the path
-[includeIf "gitdir:/home/fishd/"]
+[includeIf "gitdir/i:/home/fishd/"]
 	path = ~/.gitconfig-personal
 
 # If working in a Corporate Linux context use the corporate config
 # determined by the presence of Linux Developer Desktop standard path naming
-[includeIf "gitdir:/home/dfisher/"]
+[includeIf "gitdir/i:/home/davidfisher/"]
 	path = ~/.gitconfig-corporate
-[includeIf "gitdir:/nfs/"]
+[includeIf "gitdir/i:/nfs/"]
 	path = ~/.gitconfig-corporate
 
 # If present, include local override options

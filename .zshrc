@@ -28,7 +28,7 @@ then
 fi
 
 # stuff.
-if [ -f ~/src/agkozak-zsh-prompt/agkozak-zsh-prompt.plugin.zsh ]
+if [ -f $HOME/src/agkozak-zsh-prompt/agkozak-zsh-prompt.plugin.zsh ]
 then
   AGKOZAK_BLANK_LINES=1
   AGKOZAK_CUSTOM_SYMBOLS=( '⇣⇡' '⇣' '⇡' '+' 'x' '!' '>' '?' )
@@ -37,18 +37,23 @@ then
   AGKOZAK_MULTILINE=0
   AGKOZAK_COLORS_USER_HOST=cyan
   AGKOZAK_COLORS_PATH=green
-  source ~/src/agkozak-zsh-prompt/agkozak-zsh-prompt.plugin.zsh
+  source $HOME/src/agkozak-zsh-prompt/agkozak-zsh-prompt.plugin.zsh
 else
   # Nicer prompt.
   export PS1=$'\n'"%F{cyan} %*%F %F{green}%2~ %F{white}$ "
 fi
 
 # Allow history search via up/down keys.
-if [ -f /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh ]
+if [ -f $HOME/src/zsh-history-substring-search/zsh-history-substring-search.zsh ]
 then
-  source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+  source $HOME/src/zsh-history-substring-search/zsh-history-substring-search.zsh
   bindkey "^[[A" history-substring-search-up
   bindkey "^[[B" history-substring-search-down
+fi
+
+if [ -f $HOME/src/zsh-autosuggestions/zsh-autosuggestions.zsh]
+then
+    source /home/$SUDO_USER/src/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
 
 # history
@@ -61,9 +66,9 @@ setopt SHARE_HISTORY             # share history between all sessions.
 setopt HIST_IGNORE_ALL_DUPS      # delete old recorded entry if new entry is a duplicate.
 
 # Completions.
-autoload -Uz compinit && compinit
+# autoload -Uz compinit && compinit
 # Case insensitive.
-zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*'
+# zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*'
 
 # Git upstream branch syncer.
 # Usage: gsync master (checks out master, pull upstream, push origin).
@@ -140,4 +145,9 @@ function md2pdf () {
 # Include local config if present
 if [ -f ~/.zshrc_local ]; then
     source ~/.zshrc_local
+fi
+
+if [ -f $HOME/src/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]
+then
+    source $HOME/src/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
