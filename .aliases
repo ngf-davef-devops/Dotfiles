@@ -194,6 +194,10 @@ alias nosleep='caffeinate -dis -w $(lsof -t -c "Jamf")'
 alias sublime='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 alias activate='source ~/development/ansible/bin/activate'
 
+if [[ -f /opt/nvim-macos/bin/nvim ]]; then
+    alias vim='/opt/nvim-macos/bin/nvim'
+fi
+
 pstrip() {
 	openssl smime -inform DER -verify -in $1 -noverify -out $2 | plutil -convert xml1 $2
 }

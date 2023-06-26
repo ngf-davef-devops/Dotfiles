@@ -16,6 +16,8 @@
     ~/.bashrc: .bashrc
     ~/bin:
     ~/.config/lxterminal: .config/lxterminal
+    ~/.config/nvim: .config/nvim
+    ~/.config/tmux: .config/tmux
     ~/.config/vifm: .config/vifm
     ~/.dir_colors: .dir_colors
     ~/.gitconfig: .gitconfig
