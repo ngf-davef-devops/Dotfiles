@@ -11,11 +11,10 @@
 
 - link:
     ~/.aliases: .aliases
-    ~/.bash_env: .bash_env
-    ~/.bash_logout: .bash_logout
-    ~/.bashrc: .bashrc
     ~/bin:
     ~/.config/lxterminal: .config/lxterminal
+    ~/.config/nvim: .config/nvim
+    ~/.config/tmux: .config/tmux
     ~/.config/vifm: .config/vifm
     ~/.dir_colors: .dir_colors
     ~/.gitconfig: .gitconfig
@@ -25,9 +24,7 @@
     ~/.gitconfig-corporate: .gitconfig-corporate
     ~/.gitignore: .gitignore
     ~/.hushlogin: .hushlogin
-    ~/.inputrc: .inputrc
     ~/.nanorc: .nanorc
-    ~/.profile: .profile
     ~/.ssh/config:
         path: ssh/config
         force: false

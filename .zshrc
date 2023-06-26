@@ -28,7 +28,7 @@ then
 fi
 
 # stuff.
-if [ -f $HOME/src/agkozak-zsh-prompt/agkozak-zsh-prompt.plugin.zsh ]
+if [ -f ~/.zsh/agkozak-zsh-prompt/agkozak-zsh-prompt.plugin.zsh ]
 then
   AGKOZAK_BLANK_LINES=1
   AGKOZAK_CUSTOM_SYMBOLS=( '⇣⇡' '⇣' '⇡' '+' 'x' '!' '>' '?' )
@@ -37,23 +37,23 @@ then
   AGKOZAK_MULTILINE=0
   AGKOZAK_COLORS_USER_HOST=cyan
   AGKOZAK_COLORS_PATH=green
-  source $HOME/src/agkozak-zsh-prompt/agkozak-zsh-prompt.plugin.zsh
+  source ~/.zsh/agkozak-zsh-prompt/agkozak-zsh-prompt.plugin.zsh
 else
   # Nicer prompt.
   export PS1=$'\n'"%F{cyan} %*%F %F{green}%2~ %F{white}$ "
 fi
 
 # Allow history search via up/down keys.
-if [ -f $HOME/src/zsh-history-substring-search/zsh-history-substring-search.zsh ]
+if [ -f ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh ]
 then
-  source $HOME/src/zsh-history-substring-search/zsh-history-substring-search.zsh
+  source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
   bindkey "$terminfo[kcuu1]" history-substring-search-up
   bindkey "$terminfo[kcud1]" history-substring-search-down
 fi
 
-if [ -f $HOME/src/zsh-autosuggestions/zsh-autosuggestions.zsh  ]
+if [ -f ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh  ]
 then
-    source $HOME/src/zsh-autosuggestions/zsh-autosuggestions.zsh
+    source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
 
 # history
@@ -92,8 +92,6 @@ function gsync() {
 # Python fix for Ansible
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
-# Tell homebrew to not autoupdate every single time I run it (just once a week).
-export HOMEBREW_AUTO_UPDATE_SECS=604800
 
 # Grab Ansible Vault password file
 if [ -f /etc/ansible/.vaultpassword ]
@@ -147,7 +145,7 @@ if [ -f ~/.zshrc_local ]; then
     source ~/.zshrc_local
 fi
 
-if [ -f $HOME/src/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]
+if [ -f ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]
 then
-    source $HOME/src/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi

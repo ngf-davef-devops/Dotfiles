@@ -1,10 +1,6 @@
 [color]
   ui = true
 
-[user]
-	name = defaultUser
-	email = defaultUser@ema.il
-
 # [commit]
 # 	template = ~/.stCommitMsg
 
