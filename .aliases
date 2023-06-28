@@ -198,6 +198,10 @@ if [[ -f /opt/nvim-macos/bin/nvim ]]; then
     alias vim='/opt/nvim-macos/bin/nvim'
 fi
 
+if [[ -f $HOME/.local/bin/nvim.appimage ]]; then
+    alias vim='$HOME/.local/bin/nvim.appimage'
+fi
+
 pstrip() {
 	openssl smime -inform DER -verify -in $1 -noverify -out $2 | plutil -convert xml1 $2
 }

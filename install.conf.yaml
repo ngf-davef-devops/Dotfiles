@@ -15,6 +15,7 @@
     ~/.bash_logout: .bash_logout
     ~/.bashrc: .bashrc
     ~/bin:
+    ~/.config/kitty: .config/kitty
     ~/.config/lxterminal: .config/lxterminal
     ~/.config/nvim: .config/nvim
     ~/.config/tmux: .config/tmux
