@@ -2,7 +2,7 @@
   editor = /usr/bin/code >/dev/null 2>&1 --wait
   excludesfile = ~/.gitignore
 [credential]
-  helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+  helper = /usr/local/bin/git-credential-manager-core 
   credentialStore = secretservice
 [diff]
   tool = vscode
