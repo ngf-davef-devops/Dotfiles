@@ -2,7 +2,8 @@
   ui = true
 
 [commit]
-template = ~/.git-commit-template
+  template = ~/.git-commit-template
+  cleanup = strip
 
 ## Git identity & tooling needs to be customized depending upon two factors:
 # Linux vs Mac development environment (Windows is to be considered in the future)
