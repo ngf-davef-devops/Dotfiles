@@ -198,4 +198,9 @@ pstrip() {
 	openssl smime -inform DER -verify -in $1 -noverify -out $2 | plutil -convert xml1 $2
 }
 
-alias vim='~/.local/bin/nvim.appimage'
+if [[ -f ~/.local/bin/nvim.appimage ]]; then
+  alias vim='~/.local/bin/nvim.appimage'
+fi
+if [[ -f /mnt/c/Program\ Files\ \(x86\)/1Password\ CLI/op.exe ]]; then
+  alias op='/mnt/c/Program\ Files\ \(x86\)/1Password\ CLI/op.exe'
+fi
