@@ -1,5 +1,5 @@
 [core]
-  editor = sublime -w
+  editor = /opt/nvim-macos/bin/nvim
 	excludesfile = ~/.gitignore
 
 [credential]

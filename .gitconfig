@@ -1,8 +1,8 @@
 [color]
   ui = true
 
-# [commit]
-# 	template = ~/.stCommitMsg
+[commit]
+template = ~/.git-commit-template
 
 ## Git identity & tooling needs to be customized depending upon two factors:
 # Linux vs Mac development environment (Windows is to be considered in the future)

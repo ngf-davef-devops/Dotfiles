@@ -21,6 +21,7 @@
     ~/.config/tmux: .config/tmux
     ~/.config/vifm: .config/vifm
     ~/.dir_colors: .dir_colors
+    ~/.git-commit-template: .git-commit-template
     ~/.gitconfig: .gitconfig
     ~/.gitconfig-linux: .gitconfig-linux
     ~/.gitconfig-macos: .gitconfig-macos
