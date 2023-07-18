@@ -1,53 +1,61 @@
 Host *
-    usekeychain yes
-    addkeystoagent yes
-    identitiesonly yes
+    IgnoreUnknown UseKeychain,AddKeysToAgent
+    UseKeychain yes
+    AddKeysToAgent yes
+    IdentitiesOnly yes
 Host valheim
+    # shuttle.name = azure/valheim
     hostname 20.82.1.26
     user azureuser
     port 22
     identityfile ~/.ssh/ValheimHost_key.pem
 Host pizero
+    # shuttle.name = home/raspberrypi/pizero
     hostname 192.168.178.184
     port 22
     identityfile /Users/fishd/.ssh/pizero_ed25519
 Host ubuntu
+    # shuttle.name = home/virtual/ubuntudesktop
     hostname 192.168.178.187
     port 22
     identityfile ~/.ssh/ubuntu_ed25519
 Host debiandesktop
+    # shuttle.name = home/virtual/debiandesktop
     hostname 192.168.178.188
     port 22
     identityfile /Users/fishd/.ssh/debiandesktop_ed25519
 Host raspi-01
+    # shuttle.name = home/raspberrypi/raspi-01
     hostname 192.168.178.151
     port 22
     identityfile /Users/fishd/.ssh/id_rsa
 Host raspi-02
+    # shuttle.name = home/raspberrypi/raspi-02
     hostname 192.168.178.152
     port 22
     identityfile /Users/fishd/.ssh/id_rsa
 Host raspi-03
+    # shuttle.name = home/raspberrypi/raspi-03
     hostname 192.168.178.153
     port 22
     identityfile /Users/fishd/.ssh/id_rsa
 Host raspi-04
+    # shuttle.name = home/raspberrypi/raspi-04
     hostname 192.168.178.154
     port 22
     identityfile /Users/fishd/.ssh/id_rsa
-Host pop-os
-    hostname 192.168.178.197
-    port 22
-    identityfile /Users/fishd/.ssh/ESXi_rsa
 Host pivpn
+    # shuttle.name = home/infra/pivpn
     hostname 192.168.178.169
     port 22
     identityfile /Users/fishd/.ssh/pivpn
 Host raspi-06
+    # shuttle.name = home/raspberrypi/raspi-06
     hostname raspi-06.local.fishd.uk
     port 22
     identityfile /Users/fishd/.ssh/id_rsa
 Host mintbox
+    # shuttle.name = home/desktop/mintbox
     hostname 192.168.178.190
     port 22
     identityfile /Users/fishd/.ssh/mintbox_ed25519
