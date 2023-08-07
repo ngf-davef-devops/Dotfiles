@@ -1,15 +1,2 @@
-# BEGIN ANSIBLE MANAGED BLOCK
-Host pxeserv 192.168.3.67
-    Hostname 192.168.3.67
-    IdentityFile "/home/davidfisher/.ssh/printixgw_ed25519"
-    IdentitiesOnly true
-Host flukswireguard01 172.17.5.168
-    Hostname 172.17.5.168
-    IdentityFile "/home/davidfisher/.ssh/id_ed25519"
-    IdentitiesOnly true
-Host 10.*
-    IdentityFile "/home/davidfisher/.ssh/printixgw_ed25519"
-    ProxyJump ansible@192.168.3.67
-    StrictHostKeyChecking no
-    UserKnownHostsFile=/dev/null
-# END ANSIBLE MANAGED BLOCK
+Host *
+	IdentityAgent "~/.1password/agent.sock"
