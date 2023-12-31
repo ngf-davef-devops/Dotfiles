@@ -1,8 +1,8 @@
 Host *
-    IgnoreUnknown UseKeychain,AddKeysToAgent
-    UseKeychain yes
-    AddKeysToAgent yes
-    IdentitiesOnly yes
+    IdentityAgent "~/.1password/agent.sock"
+Host synobot*
+    hostname 192.168.178.64
+    identityfile "~/.ssh/synobot.pub"
 Host valheim
     # shuttle.name = azure/valheim
     hostname 20.82.1.26
@@ -58,4 +58,7 @@ Host mintbox
     # shuttle.name = home/desktop/mintbox
     hostname 192.168.178.190
     port 22
-    identityfile /Users/fishd/.ssh/mintbox_ed25519
+    identityfile /Users/fishd/.ssh/id_ed25519.pub
+Host kali-raspberry-pi.local
+    port 22
+    PreferredAuthentications=keyboard-interactive,password

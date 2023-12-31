@@ -8,13 +8,6 @@ My personal dotfiles and configuration files.
 4. Run the script to make a link of the dotfiles in your home directory: `./Dotfiles/update_local_config.sh`.
 
 ### Content:
-- Bash
-    - .aliases
-    - .bashrc
-    - .inputrc
-    - .bash\_logout
-    - .bash\_env
-    - .profile
 - Git
     - .gitconfig
     - .gitignore
@@ -23,3 +16,6 @@ My personal dotfiles and configuration files.
     - .zshrc
 - General
     - .hushlogin
+    - .nanorc
+    - .vimrc
+    - .vim
