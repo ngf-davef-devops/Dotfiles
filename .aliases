@@ -13,6 +13,7 @@ alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %
 #   2.  MAKE TERMINAL BETTER
 #   -----------------------------
 
+alias youtube-dl='yt-dlp'
 alias cp='cp -iv'                           # Preferred 'cp' implementation
 alias mv='mv -iv'                           # Preferred 'mv' implementation
 alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
@@ -192,7 +193,7 @@ alias showBlocked='sudo ipfw list'                  # showBlocked:  All ipfw rul
 
 alias nosleep='caffeinate -dis -w $(lsof -t -c "Jamf")'
 alias sublime='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
-alias activate='source ~/development/ansible/bin/activate'
+alias activate='source ~/.ansible/bin/activate'
 
 if [[ -f /opt/nvim-macos/bin/nvim ]]; then
     alias vim='/opt/nvim-macos/bin/nvim'
