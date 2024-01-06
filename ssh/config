@@ -1,6 +1,6 @@
 Host *
     IdentityAgent "~/.1password/agent.sock"
-Host synobot*
+Host synobot
     hostname 192.168.178.64
     identityfile "~/.ssh/synobot.pub"
 Host valheim
@@ -44,11 +44,11 @@ Host raspi-04
     hostname 192.168.178.154
     port 22
     identityfile /Users/fishd/.ssh/id_rsa
-Host pivpn
-    # shuttle.name = home/infra/pivpn
-    hostname 192.168.178.169
+Host fuzzbot
+    # shuttle.name = home/infra/fuzzbot
+    hostname 192.168.178.50
     port 22
-    identityfile /Users/fishd/.ssh/pivpn
+    identityfile /Users/fishd/.ssh/id_ed25519.pub
 Host raspi-06
     # shuttle.name = home/raspberrypi/raspi-06
     hostname raspi-06.local.fishd.uk
