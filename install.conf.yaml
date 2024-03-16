@@ -11,16 +11,9 @@
 
 - link:
     ~/.aliases: .aliases
-    ~/.bash_env: .bash_env
-    ~/.bash_logout: .bash_logout
-    ~/.bashrc: .bashrc
     ~/bin:
     ~/.config/kitty: .config/kitty
-    ~/.config/lxterminal: .config/lxterminal
     ~/.config/nvim: .config/nvim
-    ~/.config/tmux: .config/tmux
-    ~/.config/vifm: .config/vifm
-    ~/.dir_colors: .dir_colors
     ~/.git-commit-template: .git-commit-template
     ~/.gitconfig: .gitconfig
     ~/.gitconfig-linux: .gitconfig-linux
@@ -29,13 +22,7 @@
     ~/.gitconfig-corporate: .gitconfig-corporate
     ~/.gitignore: .gitignore
     ~/.hushlogin: .hushlogin
-    ~/.inputrc: .inputrc
-    ~/.nanorc: .nanorc
-    ~/.profile: .profile
     ~/.ssh/config:
         path: ssh/config
         force: false
-    ~/.vim: .vim
-    ~/.vimrc: .vimrc
-    ~/.zprofile: .zprofile
     ~/.zshrc: .zshrc
