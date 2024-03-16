@@ -10,19 +10,19 @@
       force: true
 
 - link:
-    ~/.aliases: .aliases
+    ~/.aliases: aliases
     ~/bin:
-    ~/.config/kitty: .config/kitty
-    ~/.config/nvim: .config/nvim
-    ~/.git-commit-template: .git-commit-template
-    ~/.gitconfig: .gitconfig
-    ~/.gitconfig-linux: .gitconfig-linux
-    ~/.gitconfig-macos: .gitconfig-macos
-    ~/.gitconfig-personal: .gitconfig-personal
-    ~/.gitconfig-corporate: .gitconfig-corporate
-    ~/.gitignore: .gitignore
-    ~/.hushlogin: .hushlogin
+    ~/.config/kitty: config/kitty
+    ~/.config/nvim: config/nvim
+    ~/.git-commit-template: git-commit-template
+    ~/.gitconfig: gitconfig
+    ~/.gitconfig-linux: gitconfig-linux
+    ~/.gitconfig-macos: gitconfig-macos
+    ~/.gitconfig-personal: gitconfig-personal
+    ~/.gitconfig-corporate: gitconfig-corporate
+    ~/.gitignore: gitignore
+    ~/.hushlogin: hushlogin
     ~/.ssh/config:
         path: ssh/config
         force: false
-    ~/.zshrc: .zshrc
+    ~/.zshrc: zshrc
