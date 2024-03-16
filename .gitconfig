@@ -45,6 +45,9 @@
 [includeIf "gitdir:/nfs/"]
 	path = ~/.gitconfig-corporate
 
+[url "ssh://git@github.com/"]
+  insteadOf = https://github.com/
+
 # If present, include local override options
 [include]
         path = ~/.gitconfig_local
