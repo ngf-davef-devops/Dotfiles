@@ -92,3 +92,4 @@ Thumbs.db
 *.LSOverride
 .bundle
 .vagrant
+lazy-lock.json
