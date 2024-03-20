@@ -92,3 +92,5 @@ Thumbs.db
 *.LSOverride
 .bundle
 .vagrant
+*.lock
+
