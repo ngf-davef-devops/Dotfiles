@@ -1,19 +1,11 @@
 #
 # .zshrc
 #
-# @author Jeff Geerling
-#
 
 # Colors.
 #unset LSCOLORS
 #export CLICOLOR=1
 #export CLICOLOR_FORCE=1
-
-# Don't require escaping globbing characters in zsh.
-#unsetopt nomatch
-
-# Bash-style time output.
-#export TIMEFMT=$'\nreal\t%*E\nuser\t%*U\nsys\t%*S'
 
 # Include alias file (if present) containing aliases for ssh, etc.
 if [ -f ~/.aliases ]
@@ -42,6 +34,8 @@ then
   source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
   bindkey '^[[A' history-substring-search-up
   bindkey '^[[B' history-substring-search-down
+  bindkey '\eOA' history-substring-search-up
+  bindkey '\eOB' history-substring-search-down
   bindkey -M vicmd 'k' history-substring-search-up
   bindkey -M vicmd 'j' history-substring-search-down
 fi
