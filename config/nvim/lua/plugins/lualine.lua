@@ -1,10 +1,10 @@
 return {
 	"nvim-lualine/lualine.nvim",
-  dependencies = { 'folke/tokyonight.nvim' },
+  dependencies = { 'rebelot/kanagawa.nvim' },
   config = function()
 		require("lualine").setup({
 			options = {
-				theme = "tokyonight",
+				theme = "kanagawa",
 			},
 		})
 	end,
