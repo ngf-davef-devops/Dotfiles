@@ -13,6 +13,12 @@ then
   source ~/.aliases
 fi
 
+# If user binaries present, add them to the path.
+if [ -d ~/.local/bin ]
+then
+    export PATH=~/.local/bin:$PATH
+fi
+
 # stuff.
 if [ -f ~/.zsh/agkozak-zsh-prompt/agkozak-zsh-prompt.plugin.zsh ]
 then
@@ -38,6 +44,15 @@ then
   bindkey '\eOB' history-substring-search-down
   bindkey -M vicmd 'k' history-substring-search-up
   bindkey -M vicmd 'j' history-substring-search-down
+fi
+
+# Add keybinds for emacs mode
+if [ -d /home/fishd ]
+then
+  bindkey "\e[1;3D" backward-word
+  bindkey "\e[1;3C" forward-word
+  bindkey "^[[1;9D" beginning-of-line
+  bindkey "^[[1;9C" end-of-line
 fi
 
 if [ -f ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh  ]

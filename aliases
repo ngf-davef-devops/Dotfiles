@@ -13,15 +13,28 @@ alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %
 #   2.  MAKE TERMINAL BETTER
 #   -----------------------------
 
+if [ -d "/home/fishd" ]
+then
+    alias ls="ls --color"
+fi
+
 alias youtube-dl='yt-dlp'
-alias code="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
-alias neofetch='/usr/local/bin/fastfetch'
+
+if [ -f "/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code" ]
+then
+    alias code="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
+fi
+
+if [ -f "/usr/local/bin/fastfetch" ]
+then
+    alias neofetch='/usr/local/bin/fastfetch'
+fi
 
 alias cp='cp -iv'                           # Preferred 'cp' implementation
 alias mv='mv -iv'                           # Preferred 'mv' implementation
 alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
-alias ll='colorls -lA --sd'                 # Preferred 'ls' implementation
-alias la='colorls -A'
+alias ll='ls -FGlAhp'                       # Preferred 'ls' implementation
+alias la='ls -A'
 alias less='less -FSRXc'                    # Preferred 'less' implementation
 cd() { builtin cd "$@"; ll; }               # Always list directory contents upon 'cd'
 alias cd..='cd ../'                         # Go back 1 directory level (for fast typers)
@@ -200,10 +213,6 @@ fi
 
 if [[ -f $HOME/.local/bin/nvim.appimage ]]; then
     alias vim='$HOME/.local/bin/nvim.appimage'
-fi
-
-if [[ -f /usr/local/bin/colorls ]]; then
-  alias ls='/usr/local/bin/colorls'
 fi
 
 pstrip() {
