@@ -20,24 +20,37 @@ then
 fi
 
 # stuff.
-if [ -f ~/.zsh/agkozak-zsh-prompt/agkozak-zsh-prompt.plugin.zsh ]
+if [ ! -f ~/src/agkozak-zsh-prompt/agkozak-zsh-prompt.plugin.zsh ]
 then
-  AGKOZAK_BLANK_LINES=1
-  AGKOZAK_CUSTOM_SYMBOLS=( '⇣⇡' '⇣' '⇡' '+' 'x' '!' '>' '?' )
-  AGKOZAK_USER_HOST_DISPLAY=1
-  AGKOZAK_MULTILINE=1
-#  AGKOZAK_COLORS_USER_HOST=cyan
-#  AGKOZAK_COLORS_PATH=green
-  source ~/.zsh/agkozak-zsh-prompt/agkozak-zsh-prompt.plugin.zsh
+    git clone https://github.com/agkozak/agkozak-zsh-prompt.git $HOME/src/agkozak-zsh-prompt/
+    AGKOZAK_BLANK_LINES=1
+    AGKOZAK_CUSTOM_SYMBOLS=( '⇣⇡' '⇣' '⇡' '+' 'x' '!' '>' '?' )
+    AGKOZAK_USER_HOST_DISPLAY=1
+    AGKOZAK_MULTILINE=1
+    source ~/src/agkozak-zsh-prompt/agkozak-zsh-prompt.plugin.zsh
 else
-  # Nicer prompt.
-  export PS1=$'\n'"%F{cyan} %*%F %F{green}%2~ %F{white}$ "
+    AGKOZAK_BLANK_LINES=1
+    AGKOZAK_CUSTOM_SYMBOLS=( '⇣⇡' '⇣' '⇡' '+' 'x' '!' '>' '?' )
+    AGKOZAK_USER_HOST_DISPLAY=1
+    AGKOZAK_MULTILINE=1
+#   AGKOZAK_COLORS_USER_HOST=cyan
+#   AGKOZAK_COLORS_PATH=green
+  source ~/src/agkozak-zsh-prompt/agkozak-zsh-prompt.plugin.zsh
 fi
 
 # Allow history search via up/down keys.
-if [ -f ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh ]
+if [ ! -f ~/src/zsh-history-substring-search/zsh-history-substring-search.zsh ]
 then
-  source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
+    git clone https://github.com/zsh-users/zsh-history-substring-search.git $HOME/src/zsh-history-substring-search/
+  source ~/src/zsh-history-substring-search/zsh-history-substring-search.zsh
+  bindkey '^[[A' history-substring-search-up
+  bindkey '^[[B' history-substring-search-down
+  bindkey '\eOA' history-substring-search-up
+  bindkey '\eOB' history-substring-search-down
+  bindkey -M vicmd 'k' history-substring-search-up
+  bindkey -M vicmd 'j' history-substring-search-down
+else
+  source ~/src/zsh-history-substring-search/zsh-history-substring-search.zsh
   bindkey '^[[A' history-substring-search-up
   bindkey '^[[B' history-substring-search-down
   bindkey '\eOA' history-substring-search-up
@@ -55,9 +68,12 @@ then
   bindkey "^[[1;9C" end-of-line
 fi
 
-if [ -f ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh  ]
+if [ ! -f ~/src/zsh-autosuggestions/zsh-autosuggestions.zsh  ]
 then
-    source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+    git clone https://github.com/zsh-users/zsh-autosuggestions.git $HOME/src/zsh-autosuggestions/
+    source ~/src/zsh-autosuggestions/zsh-autosuggestions.zsh
+else
+    source ~/src/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
 
 # history
@@ -96,7 +112,10 @@ if [ -f ~/.zshrc_local ]; then
     source ~/.zshrc_local
 fi
 
-if [ -f ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]
+if [ ! -f ~/src/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]
 then
-    source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/src/zsh-syntax-highlighting/
+    source ~/src/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+else
+    source ~/src/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
